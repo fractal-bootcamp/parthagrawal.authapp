@@ -13,3 +13,8 @@ app.listen(PORT, () => {
 app.get('/posts', (req, res) => {
     res.send("some posts")
 })
+
+app.post('/checkAuthToken', (req, res) => {
+    console.log(req)
+    res.send("user's token is:")
+})

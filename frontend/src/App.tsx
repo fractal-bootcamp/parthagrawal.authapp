@@ -24,6 +24,11 @@ function App() {
           </div>
           <h1>You are signed in!!</h1>
 
+          <form action="http://localhost:4000/checkAuthToken" method="POST">
+            <h3>Form</h3>
+            <button type="submit">View posts</button>
+          </form>
+
 
 
         </SignedIn>
