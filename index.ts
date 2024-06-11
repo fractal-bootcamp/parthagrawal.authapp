@@ -1,6 +1,9 @@
+import cookieParser from 'cookie-parser';
 import express from 'express';
 
 const app = express();
+app.use(cookieParser())
+
 
 app.get('/', (req, res) => {
     res.send("server is saying hello world!")
@@ -15,6 +18,7 @@ app.get('/posts', (req, res) => {
 })
 
 app.post('/checkAuthToken', (req, res) => {
-    console.log(req)
-    res.send("user's token is:")
+    // console.log(req.cookies.__clerk_db_jwt)
+    // console.log(req)
+    res.send("user's token is: " + req.cookies.__clerk_db_jwt)
 })
