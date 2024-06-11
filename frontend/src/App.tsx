@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/clerk-react'
+import { SignInButton, SignOutButton, SignedIn, SignedOut, UserButton } from '@clerk/clerk-react'
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <header>
         <SignedOut>
-          <div className="flex align-start">
+          <div className="flex justify-between">
 
             <SignInButton />
           </div>
@@ -18,11 +18,12 @@ function App() {
         </SignedOut>
 
         <SignedIn>
-          <div>
-            <h1>You are signed in!!</h1>
+          <div className="flex flex-row justify-between">
             <UserButton />
-
+            <SignOutButton />
           </div>
+          <h1>You are signed in!!</h1>
+
 
 
         </SignedIn>
